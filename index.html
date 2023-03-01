@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi cv</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".full_info_wrap .tabs ul li").click(function(){
+				$(".full_info_wrap .tabs ul li").removeClass("active");
+				$(this).addClass("active");
+
+				var datali = $(this).attr("data-li");
+
+				$(".full_info_item").hide();
+
+				if(datali == "experience"){
+					$(".experience").show();
+				}
+				else if(datali == "education"){
+					$(".education").show();
+				}
+				else if(datali == "contact"){
+					$(".contact").show();
+				}
+				else{
+					console.log("Loding...");
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	
+<div class="wrapper">
+    <div class="resume">
+        
+        <div class="profile_info">
+            <div class="profile_img">
+                <img src="img/profile_pic.png" alt="profile_img">
+            </div>
+            <div class="profile_data">
+                <p class="name">Analia Raquel</p>
+                <span><i class="fas fa-map-marker-alt"></i>Salta Capital</span>
+                <p></p>
+            </div>
+            <br>
+            <div class="view_more_btn">
+                <a href="#">¡¡¡Hola a todos!!!</a>
+            </div>
+        </div>  
+        
+        <div class="skills">
+            <div class="title">
+                Habilidades
+            </div>
+            <ul>
+                <li>
+                    <div class="skill_item html">
+                        <div class="icon"></div>
+                            <div class="text">HTML</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill_item css">
+                        <div class="icon"></div>
+                        <div class="text">CSS</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill_item js">
+                        <div class="icon"></div>
+                        <div class="text">Javascript</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill_item photoshop">
+                        <div class="icon"></div>
+                        <div class="text">Photoshop</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill_item angular">
+                        <div class="icon"></div>
+                        <div class="text">AngularJS</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill_item react">
+                        <div class="icon"></div>
+                        <div class="text">ReactJS</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="full_info_wrap">
+            <div class="tabs">
+                <ul>
+                    <li data-li="experience" class="active">Experiencia</li>
+                    <li data-li="education">Educacion</li>
+                    <li data-li="contact">Contacto</li>  
+                </ul>  
+            </div>  
+            
+            <div class="full_info">
+                <div class="full_info_item experience">
+                    <div class="title">EXPERIENCIA LABORAL</div>
+
+                    <div class="info_wrap">
+                        <ul>
+                            <li>
+                                <div class="sub_title">
+                                    2018- 2020
+                                </div>
+								
+								<div class="info_item">
+									<div class="info_title">
+										Mercado Libre
+									</div>
+									<div class="data">
+										Inicie mi primer trabajo como programador junior.
+									</div>
+								</div>
+                            </li>
+                            <li>
+                                <div class="sub_title">
+                                    2021 - 2022
+                                </div>
+								
+								<div class="info_item">
+									<div class="info_title">
+										Amazon Pvt Limited
+									</div>
+									<div class="data">
+										Continué con mi trabajo de programador pero mas abocado al front end.
+									</div>
+								</div>
+                            </li>
+                            <li>
+                                <div class="sub_title">
+                                    2023 - Present
+                                </div>
+								
+								<div class="info_item">
+									<div class="info_title">
+										Google
+									</div>
+									<div class="data">
+										Actualmente me desempeño trabajando en en area de backend en esta empresa.
+									</div>
+								</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="full_info_item education" style="display: none;">
+                    <div class="title">EDUCACION</div>
+
+                    <div class="info_wrap">
+                        <ul>
+                            <li>
+                                <div class="sub_title">
+                                    2013-2016
+                                </div>
+								
+								<div class="info_item">
+									<div class="info_title">
+										Universidad Tecnologia de Buenos Aires
+									</div>
+									<div class="data">
+										Tecnicatura en Programacion.
+									</div>
+								</div>
+                            </li>
+                            <li>
+                                <div class="sub_title">
+                                    2016 - 2018 	
+                                </div>
+								
+								<div class="info_item">
+									<div class="info_title">
+										Instituto Henrry
+									</div>
+									<div class="data">
+										Diplomatura Full Stack.
+									</div>
+								</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="full_info_item contact" style="display: none;">
+                    <div class="title">CONTACT0</div>
+
+                    <div class="info_wrap">
+                        <ul>
+                            <li>
+                                <span class="info_q">Email</span>
+                                <span class="info_a">scarlett.rosey@gmail.com</span>
+                            </li>
+                            
+                            <li>
+                                <span class="info_q">Phone</span>
+                                <span class="info_a">scarlett.rosey@gmail.com</span>
+                            </li>
+                            <li>
+                                <span class="info_q">Linkedin</span>
+                                <span class="info_a">linkedin.com/rosey1</span>
+                            </li>
+                            <li>
+                                <span class="info_q">Facebook</span>
+                                <span class="info_a">facebook.com/scarlett</span>
+                            </li>
+                            <li>
+                                <span class="info_q">Twitter</span>
+                                <span class="info_a">twitter.com/Srosey</span>
+                            </li>
+                            <li>
+                                <span class="info_q">Instagram</span>
+                                <span class="info_a">instagram.com/rosey124</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>  
+            </div> 
+        </div>
+        
+    </div>
+</div>
+<p id="demo">¡Saludos!.</p>
+<button type="button" id="boton">Click aquí</button>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
